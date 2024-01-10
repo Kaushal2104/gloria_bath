@@ -1,0 +1,128 @@
+header {
+  width: 100%;
+  padding: 0rem 1rem;
+  padding-top: 1rem;
+  //   border: 1px solid black;
+  .header-container {
+    width: 100%;
+    display: grid;
+    .menu_close_button {
+      display: none;
+    
+    }
+    @include media(">md") {
+      grid-template-columns: 100px 1fr auto;
+    }
+    @include media("<=md") {
+      grid-template-columns: unset;
+      grid-template-rows: 60px auto auto;
+      .logo-container {
+        display: flex;
+        justify-content: space-between;
+        .menu_close_button {
+          display: block;
+        button{
+          border: transparent;
+          font-size: 2rem;
+          background-color: none;
+          border-radius: 1rem;
+        }
+        }
+      }
+    }
+
+    //
+
+    //
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      @include media("<=md") {
+        justify-content: start;
+      }
+      .nav {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @include media("<=md") {
+          flex-direction: column;
+        }
+        li {
+          padding: 0.4rem 1rem;
+          &:has(a.active) {
+            background-color: black;
+            a {
+              color: white;
+            }
+          }
+          a {
+            font-size: 1.7rem;
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  //
+  .social-icon-container {
+    //   display: flex;
+    //   justify-content: end;
+    .social-icon {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      padding-right: 0.5rem;
+      height: 100%;
+      .social-nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        column-gap: 1rem;
+        list-style: none;
+        font-size: 1.7rem;
+        @include media("<=md") {
+          flex-direction: column;
+          // justify-content: start;
+          align-items: start;
+          padding-left: 1rem;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          // border: 1px solid black;
+
+          @include media("<=md") {
+            padding: 0.5rem 0;
+            &:nth-child(1) {
+              order: 3;
+            }
+          }
+          .social {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            li {
+              margin-right: 1rem;
+              a {
+                color: black;
+              }
+            }
+          }
+          input {
+            outline: none;
+            font-size: 1.6rem;
+            padding: 0.3rem 0.6rem;
+            height: 100%;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+    //
+  }
+}

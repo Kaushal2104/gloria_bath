@@ -1,0 +1,101 @@
+.product-display-data {
+
+  @include media(">md") {
+    padding-bottom: 100px;
+  }
+  .wrapper-ct {
+    width: 100%;
+    display: grid;
+    margin: 5rem 0;
+    column-gap: 1rem;
+    @include media(">md") {
+      grid-template-columns: minmax(300px, 1fr) 2fr;
+      grid-template-rows: minmax(350px, auto);
+      &:nth-child(odd) {
+        grid-template-columns: 2fr minmax(300px, 1fr);
+        > :nth-child(1) {
+          grid-column: 2/-1;
+          padding: 0;
+        }
+        > :nth-child(2) {
+          grid-row: -1/1;
+        }
+      }
+      .product-image.overlap-Effect {
+        position: relative;
+        padding: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          &::before {
+            background-color: #3a3a3b6c;
+          }
+        }
+      }
+    }
+    @include media("<md") {
+      grid-template-columns: unset;
+      grid-template-rows: 350px auto;
+    }
+    > div {
+     padding: 1rem;
+    }
+    .product-image {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        font-family: "Roboto Mono", monospace;
+        font-size: 3rem;
+        font-weight: 200;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.3rem;
+        margin: 1rem 0;
+      }
+      .link-reed {
+        align-self: baseline;
+      }
+    }
+  }
+}
+.review_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  grid-template-rows: minmax(350px auto);
+  grid-auto-flow: row;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: center;
+}
+.background_image_day{
+    // border: 1px solid black;
+    padding: 10rem 0;
+    background-color: gray;
+    &:has(.title){
+        .title{
+            text-align: center;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            // font-family: 'Rubik Scribble', system-ui;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            color: white;
+        }
+    }
+}
