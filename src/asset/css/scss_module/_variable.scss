@@ -1,0 +1,31 @@
+// font-family
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Rubik+Maps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:ital,wght@0,300;0,500;1,500&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap");
+
+// variable
+$themeColor: #006571;
+$borderColor: #b2b2b2;
+
+// mixan
+@mixin button($btnColor) {
+  width: 100%;
+  max-width: 200px;
+  background-color: $btnColor;
+  color: white;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 0.4rem 2rem;
+  font-size: 1.6rem;
+  font-family: inter, Arial, Helvetica, sans-serif;
+  &.active {
+    color: $btnColor;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-color: $btnColor;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.863);
+    color: $btnColor;
+    border-color: $btnColor;
+  }
+}

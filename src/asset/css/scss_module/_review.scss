@@ -1,13 +1,17 @@
+$bgc: #3a3939;
+$reviewTectCl: black;
 .review {
-  border: 1px solid white;
   padding: 2rem;
-  border-radius: 2rem 0;
+  border: 1px solid #b2b2b2;
+  
+  backdrop-filter: blur(0.6rem);
   .review-image {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
     margin: 2rem auto;
+    border: 1px solid #b2b2b2;
     img {
       width: 100%;
       height: 100%;
@@ -19,23 +23,36 @@
     h3 {
       font-size: 2.6rem;
       font-family: "Roboto Mono", monospace;
-      color: white;
+      color: black;
+      // color: white;
       text-align: center;
+    }
+    .review-star {
+      display: flex;
+      gap: 0.4rem;
+      justify-content: center;
+      color: rgb(189, 189, 24);
     }
   }
   .review-body {
     p {
-      color: white;
+      color: $reviewTectCl;
       padding-top: 1.4rem;
+      text-align: justify;
       padding-bottom: 1.3;
       font-size: 1.5rem;
       text-align: center;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 7;
+      overflow: hidden;
     }
-}
-a {
-  text-align: center;
-  button {
-    font-size: 1.2rem;
   }
-}
+  a {
+    text-align: center;
+   
+    button {
+@include button(#171717)
+    }
+  }
 }

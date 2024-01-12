@@ -1,57 +1,56 @@
-.product-display-data {
+// @import url('https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap');
 
+.product-display-data {
   @include media(">md") {
-    padding-bottom: 100px;
+    padding-bottom: 10px;
   }
+
   .wrapper-ct {
     width: 100%;
     display: grid;
     margin: 5rem 0;
-    column-gap: 1rem;
+    column-gap: 11rem;
+
     @include media(">md") {
       grid-template-columns: minmax(300px, 1fr) 2fr;
-      grid-template-rows: minmax(350px, auto);
+      grid-template-rows: 350px;
+
       &:nth-child(odd) {
         grid-template-columns: 2fr minmax(300px, 1fr);
         > :nth-child(1) {
           grid-column: 2/-1;
-          padding: 0;
         }
         > :nth-child(2) {
           grid-row: -1/1;
         }
       }
-      .product-image.overlap-Effect {
-        position: relative;
-        padding: 0;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-
-          transition: all 0.3s ease-in-out;
-        }
-        &:hover {
-          &::before {
-            background-color: #3a3a3b6c;
-          }
-        }
-      }
     }
     @include media("<md") {
       grid-template-columns: unset;
-      grid-template-rows: 350px auto;
+      grid-template-rows: 300px auto;
     }
     > div {
-     padding: 1rem;
+      // padding: 1rem;
     }
     .product-image {
+      // padding: 2rem;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+    .product-image.overlap-Effect {
+      position: relative;
+      // padding: 3rem 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
       }
     }
     .content {
@@ -59,43 +58,180 @@
       align-items: center;
 
       h3 {
-        font-family: "Roboto Mono", monospace;
+        // font-family: "Roboto Mono", monospace;
+        // font-family: "Noto Sans Mono", monospace;
+        font-family: "Inter", sans-serif;
         font-size: 3rem;
-        font-weight: 200;
+        font-weight: 400;
         margin-bottom: 2rem;
+        color: $themeColor;
       }
       p {
         font-size: 1.3rem;
         margin: 1rem 0;
+        text-align: justify;
+        max-height: 100px;
+        color: #171717;
       }
-      .link-reed {
-        align-self: baseline;
+      .link-read {
+        a {
+          text-decoration: none;
+          font-size: 1.4rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
 }
+//
+.over_product {
+  padding: 3rem 0;
+  .product-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    column-gap: 2rem;
+    grid-template-rows: 400px;
+    > .product {
+      border: 1px solid $borderColor;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        &::before {
+          opacity: 0.6;
+        }
+        .product-det {
+          top: 50%;
+          visibility: visible;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .product-det {
+        // border: 1px solid black;
+        padding: 1rem;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        h3 {
+          width: min-content;
+          font-weight: 600;
+          font-size: 3rem;
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0.6rem auto;
+        }
+        button {
+          @include button(#006571);
+        }
+      }
+    }
+  }
+}
+// letest collection
+.letest_collection {
+  .product-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    h3 {
+      font-size: 3rem;
+      color: $themeColor;
+    }
+    p {
+      font-size: 1.6rem;
+      color: #171717;
+    }
+    button {
+      @include button(#363331);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      &::before {
+        background-color: #ffffff5e;
+      }
+    }
+    img {
+      width: 100%;
+      height: 300px;
+    }
+    .content-wrapper {
+      position: absolute;
+      top: -100%;
+      left: 10%;
+      transform: translateY(-50%);
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      // background-color: rgba(245, 245, 245, 0.418);
+      padding: 1rem 2rem;
+      // box-shadow: 0 0 100px whitesmoke;
+    }
+    &:hover {
+      .content-wrapper {
+        top: 50%;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+//
+.customer_review {
+  padding: 8rem 0;
+  background-image: url("https://i.pinimg.com/564x/60/5d/85/605d853460150537558c7676513fc460.jpg");
+}
 .review_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
-  grid-template-rows: minmax(350px auto);
   grid-auto-flow: row;
-  column-gap: 2rem;
-  row-gap: 2rem;
+  gap: 2rem;
   justify-content: center;
 }
-.background_image_day{
+.patner-link {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  justify-content: space-evenly;
+  // padding: 4rem 0;
+  gap: 1.5rem;
+  @include media("<=md") {
+    grid-template-columns: repeat(auto-fit, 100px);
+  }
+  .ptn-logo {
     // border: 1px solid black;
-    padding: 10rem 0;
-    background-color: gray;
-    &:has(.title){
-        .title{
-            text-align: center;
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            // font-family: 'Rubik Scribble', system-ui;
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 400;
-            color: white;
-        }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
+  }
 }

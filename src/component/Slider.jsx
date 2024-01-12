@@ -1,7 +1,9 @@
+
 import { Link } from "react-router-dom";
 
 
 function CarouselFadeExample() {
+
   return (
     <div
       id="carouselExampleCaptions"
@@ -30,10 +32,10 @@ function CarouselFadeExample() {
           aria-label="Slide 3"
         />
       </div>
-      <div style={{ height: "400xp" }} className="carousel-inner">
+      <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1580377968131-bac075a9a3d7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="d-block w-100"
             alt="..."
           />
@@ -45,7 +47,8 @@ function CarouselFadeExample() {
         </div>
         <div className="carousel-item">
           <img
-            src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            // src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1556908493-4ac5f138ab77?q=80&w=1435&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="d-block w-100"
             alt="..."
           />
@@ -57,7 +60,7 @@ function CarouselFadeExample() {
         </div>
         <div className="carousel-item">
           <img
-            src="https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1418754356805-b89082b6965e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="d-block w-100"
             alt="..."
           />

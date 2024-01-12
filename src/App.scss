@@ -1,13 +1,84 @@
 html {
   font-size: 63.5%;
 }
+// variabal
 
+//
 // @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,500&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap");
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:ital,wght@0,300;0,500;1,500&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap');
-
 
 @import "asset/css/scss_module/breakpoint";
+@import "asset/css/scss_module/variable";
 @import "asset/css/scss_module/header";
+@import "asset/css/scss_module/breadcum";
 @import "asset/css/scss_module/home";
 @import "asset/css/scss_module/slider";
 @import "asset/css/scss_module/review";
+@import "asset/css/scss_module/trendingProduct";
+@import "asset/css/scss_module/catagorySlider";
+@import "asset/css/scss_module/overSocial";
+@import "asset/css/scss_module/productPage";
+@import "asset/css/scss_module/singleProduct";
+//
+@import "asset/css/scss_module/footer";
+
+.social.facebook {
+  &:hover {
+    .icon {
+      color: #3b5998;
+    }
+  }
+}
+.social.twitter {
+  &:hover {
+    .icon {
+      color: #55acee;
+    }
+  }
+}
+.social.youtube {
+  &:hover {
+    .icon {
+      color: #cd201f;
+    }
+  }
+}
+.social.instagram {
+  &:hover {
+    .icon {
+      color: #e12828;
+    }
+  }
+}
+.title {
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  margin: 3rem auto;
+  width: max-content;
+  font-weight: 200;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  color: #171717;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background-color: $themeColor;
+    bottom: -0.5rem;
+    left: 0;
+  }
+}
+
+@include media("<=md") {
+  html {
+    font-size: 55%;
+  }
+}
+@include media("<=sm") {
+  html {
+    font-size: 45%;
+  }
+}

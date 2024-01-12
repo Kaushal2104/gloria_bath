@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { FaStar } from "react-icons/fa6";
 
 export default function ReviewHome() {
   return (
@@ -14,6 +14,7 @@ export default function ReviewHome() {
         </div>
         <div className="review_name">
           <h3>Name</h3>
+          <div><span className="review-star"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></span></div>
         </div>
       </div>
       <div className="review-body">
@@ -25,8 +26,8 @@ export default function ReviewHome() {
         </p>
       </div>
       <div style={{textAlign:"center"}}>
-      <Link to="/">
-          <Button className="read_more_link" title="Read more">Read more</Button>
+      <Link to="/singleProduct">
+         <button>Read more</button>
         </Link>
       </div>
     </div>
