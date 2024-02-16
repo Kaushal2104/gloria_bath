@@ -1,0 +1,16 @@
+.table {
+  width: 100%;
+}
+.table thead {
+  font-size: 1.6rem;
+}
+.table thead th {
+  border: 1px solid #ccc;
+}
+.table tbody {
+  font-size: 1.4rem;
+}
+.table tbody tr td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}/*# sourceMappingURL=products.css.map */

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Rubik+Maps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:ital,wght@0,300;0,500;1,500&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap");
+.button-nav {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0.5rem;
+}
+.button-nav li button {
+  width: 100%;
+  max-width: 200px;
+  background-color: #0d274b;
+  color: white;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 0.4rem 2rem;
+  font-size: 1.6rem;
+  font-family: inter, Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-nav li button.active {
+  color: #0d274b;
+  background-color: rgba(255, 255, 255, 0.863);
+  border-color: #0d274b;
+}
+.button-nav li button:hover {
+  background-color: rgba(255, 255, 255, 0.863);
+  color: #0d274b;
+  border-color: #0d274b;
+}
+.button-nav li button span {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 1rem;
+}
+
+table {
+  width: 100%;
+  padding: 0.5rem;
+}
+table tbody tr:hover {
+  background-color: tan;
+}
+table th {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 1rem 0.5rem;
+}
+table th,
+table td {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+table td button.delete {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  background-color: #171717;
+  color: #e8e8e8;
+}
+table td button.update {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  background-color: #cecece;
+  color: #313131;
+}/*# sourceMappingURL=blog.css.map */

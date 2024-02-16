@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Rubik+Maps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:ital,wght@0,300;0,500;1,500&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap");
+.admin-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+.admin-grid > div {
+  border: 1px solid black;
+}
+.admin-grid .navbar {
+  align-items: start;
+}
+.admin-grid .navbar ul {
+  border: transparent;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.admin-grid .navbar ul li {
+  padding: 0.5rem 1rem;
+}
+.admin-grid .navbar ul li a {
+  text-decoration: none;
+  color: #171717;
+  font-size: 1.5rem;
+}
+.admin-grid .navbar ul li a.active {
+  border-bottom: 1px solid #171717;
+}/*# sourceMappingURL=admin.css.map */

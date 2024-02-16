@@ -3,7 +3,7 @@ $reviewTectCl: black;
 .review {
   padding: 2rem;
   border: 1px solid #b2b2b2;
-  
+
   backdrop-filter: blur(0.6rem);
   .review-image {
     width: 80px;
@@ -50,9 +50,9 @@ $reviewTectCl: black;
   }
   a {
     text-align: center;
-   
+
     button {
-@include button(#171717)
+      @include button(#171717);
     }
   }
 }

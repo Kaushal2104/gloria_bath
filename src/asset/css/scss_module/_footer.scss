@@ -1,7 +1,7 @@
 footer {
   padding: 3rem 2rem;
   background-color: #000;
-  .logo{
+  .logo {
     width: 100%;
     max-width: 300px;
   }
@@ -9,18 +9,23 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
     .f_item {
       padding: 0.6rem 2rem;
       .f_link {
         font-size: 1.5rem;
         text-decoration: none;
         color: white;
-        &:hover{
+        &:hover {
           text-decoration: underline;
           text-underline-offset: 0.4rem;
         }
       }
     }
+  }
+  address {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 300;
   }
 }

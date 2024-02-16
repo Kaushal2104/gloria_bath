@@ -15,11 +15,12 @@
       &:hover {
         .title_ct {
           top: 0;
+          padding: 3rem 3rem;
           background: linear-gradient(
             90deg,
             $themeColor 53%,
             rgba(219, 219, 219, 0.006039915966386533) 81%
-          );
+            );
         }
       }
       .title_ct {
@@ -30,7 +31,9 @@
         height: 100%;
         padding: 1rem 3rem;
         background-color: $themeColor;
+        font-family: $font-f;
         @include media("<=md") {
+          padding: 3rem 3rem;
           top: 0;
           background: linear-gradient(
             90deg,
@@ -39,18 +42,23 @@
           );
         }
 
-        a {
-          color: white;
-          text-decoration: none;
-          font-weight: 300;
-          font-size: 1.7rem;
-          letter-spacing: 0.2rem;
-          font-family: Arial, Helvetica, sans-serif;
+        h4 {
+          margin-bottom: 2rem;
+          a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 1.7rem;
+            letter-spacing: 0;
+          }
         }
         p {
           max-width: 200px;
           font-size: 1.3rem;
+          font-weight: 100;
+          line-height: 17px;
           color: white;
+          @include box(4);
         }
       }
     }

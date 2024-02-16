@@ -29,7 +29,7 @@ export default function HomeProductWithDetail(props) {
               116 Bath Accessories 120 | Allied 127`}
             </p>
             <div className="link-read">
-              <Link to={props.linkID}>Read more</Link>
+              <Link to={'/singleProduct'} state={props.linkID}>Read more</Link>
             </div>
           </div>
         </div>

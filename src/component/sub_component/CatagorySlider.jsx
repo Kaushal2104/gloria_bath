@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CatagorySlide from "./catagoryComponent/CatagorySlide";
+import axios from "axios";
 
 export default function CatagorySlider() {
+  const [category, setcategory] = useState([]);
+  useEffect(() => {
+    const url = `http://127.0.0.1:8000/category`;
+    const fetchCategory = async () => {
+      try {
+        const response = await axios(url);
+        setcategory(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchCategory();
+  }, []);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -20,7 +35,7 @@ export default function CatagorySlider() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
   return (
@@ -28,28 +43,18 @@ export default function CatagorySlider() {
       <Carousel
         responsive={responsive}
         infinite={true}
-        removeArrowOnDeviceType={["tablet"]}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
       >
-        <CatagorySlide
-          image="https://i.pinimg.com/564x/37/da/74/37da7407ef4e88bfb39256bf773d79e4.jpg"
-          cname={"Catagory-1"}
-        />
-        <CatagorySlide
-          image="https://i.pinimg.com/564x/71/56/e2/7156e25a63f6f84959d63d5db1caab92.jpg"
-          cname={"Catagory-2"}
-        />
-        <CatagorySlide
-          image="https://i.pinimg.com/564x/63/32/a6/6332a6818d56debe4a40627e816a9fca.jpg"
-          cname={"Catagory-3"}
-        />
-        <CatagorySlide
-          image="https://i.pinimg.com/564x/04/dc/77/04dc77af1277a31ef32992bfaf76cc62.jpg"
-          cname={"Catagory-5"}
-        />
-        <CatagorySlide
-          image="https://i.pinimg.com/564x/68/d5/27/68d527c1ab2e7eee189daaa80c2ae8a4.jpg"
-          cname={"Catagory-6"}
-        />
+        {category.map((val, ind) => {
+          return (
+            <CatagorySlide
+              id={val._id}
+              image={val.url}
+              cname={val.name}
+              dec={val.dec}
+            />
+          );
+        })}
       </Carousel>
       ;
     </>

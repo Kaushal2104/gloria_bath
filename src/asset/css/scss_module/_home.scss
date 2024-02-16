@@ -121,7 +121,6 @@
         object-fit: cover;
       }
       .product-det {
-        // border: 1px solid black;
         padding: 1rem;
         position: absolute;
         top: 150%;
@@ -217,7 +216,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 250px);
   justify-content: space-evenly;
-  // padding: 4rem 0;
+  padding: 4rem 0;
   gap: 1.5rem;
   @include media("<=md") {
     grid-template-columns: repeat(auto-fit, 100px);

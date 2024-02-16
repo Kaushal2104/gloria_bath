@@ -1,4 +1,28 @@
 .trending-product-wrapper {
-
+  .product-wrapper {
+    display: grid;
+    grid-template-rows: 300px;
+    justify-content: center;
+    padding: 5rem 0;
+    @include media(">md") {
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+    @include media("<=md") {
+      grid-template-rows: repeat(3, minmax(150px, 1fr));
+      grid-template-columns: calc(100% - 100px);
+    }
+    > div {
+      padding: 0 2rem;
+      &:nth-child(2) {
+        border: 1px solid black;
+        border-top: transparent;
+        border-bottom: transparent;
+        @include media("<=md") {
+          border: 1px solid black;
+          border-left: transparent;
+          border-right: transparent;
+        }
+      }
+    }
+  }
 }
-// }

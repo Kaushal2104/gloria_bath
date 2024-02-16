@@ -1,0 +1,95 @@
+.catagory-title {
+  font-size: 2rem;
+  font-family: $font-f;
+  text-transform: uppercase;
+  padding-left: 2rem;
+  margin-top: 3rem;
+  @include media("<=md") {
+    text-align: center;
+    font-size: 4rem;
+    font-family: $font-f;
+  }
+}
+
+.catagory-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-template-rows: 300px;
+  grid-auto-flow: row;
+  grid-auto-rows: 300px;
+  column-gap: 3rem;
+  place-content: center;
+  margin: 2rem 0;
+  gap: 2rem;
+  @include media("<=md") {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
+    grid-template-rows: 200px;
+    grid-auto-rows: 200px;
+  }
+  .catagory {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // border: 1px solid black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      z-index: 0;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 2/1;
+    }
+    .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      @include media("<=md") {
+        background-color: #ffffff95;
+      }
+      transition: all 0.3s ease-in-out;
+      @include media(">md") {
+        transform: translate(-50%, -50%) scaleY(0);
+        left: 50%;
+        top: 130%;
+      }
+      h4 {
+        font-size: 2.5rem;
+        font-family: $font-2;
+        color: $themeColor;
+      }
+      p {
+        font-family: $font-f;
+        color: #171717;
+        font-size: 1.7rem;
+        @include box(3)
+      }
+    }
+    @include media(">md") {
+      &:hover {
+        .content {
+          top: 50%;
+          backdrop-filter: blur(3px);
+          transform: translate(-50%, -50%) scaleY(1) !important;
+        }
+        &::before {
+          background-color: rgba(255, 255, 255, 0.493);
+        }
+      }
+    }
+  }
+}

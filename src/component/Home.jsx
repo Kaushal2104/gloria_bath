@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carosar from "./Slider";
 import ReviewHome from "./sub_component/ReviewHome";
 import TrendingProduct from "./sub_component/TrendingProduct";
@@ -6,9 +6,12 @@ import CatagorySlider from "./sub_component/CatagorySlider";
 import HomeProductWithDetail from "./sub_component/HomeProductWithDetail";
 import OverSocial from "./sub_component/OverSocial";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
 export default function Home() {
   const navig = useNavigate();
+ 
+
   return (
     <div className="container-fluid p-0">
       <Carosar />
@@ -19,23 +22,27 @@ export default function Home() {
       </div>
       <section className="product-display-data">
         <div className="container">
-          <HomeProductWithDetail
-            linkID="/singleProduct"
-            title="Faucts"
-            dec="Shop your bathroom and kitchen sink faucets from a variety of styles and colors to suit every style; including vintage, modern and smart touch sensor faucets."
-            image="https://i.pinimg.com/564x/17/d8/47/17d847e63c9a34f696126406d404a6a4.jpg"
-          />
+          {/* {category.map((val, ind) => {
+            return (
+              <HomeProductWithDetail
+                linkID={val._id}
+                title={val.name}
+                dec={val.dec}
+                image={val.url}
+              />
+            );
+          })} */}
           <HomeProductWithDetail
             linkID="/singleProduct"
             dec="Fiora Sigma Silexpol® Oval Countertop Washbasin This stylish Fiora Sigma is a oval counter top washbasin. The Sigma counter top basin combines minimalism with timeless elegance and made of Silexpol® a mixture of polyurethane resin, silica and other minerals. The washbasin is available in a choice of colours and sizes. All Fiora Silexpol washbasins come with a 5 year guarantee. The Sigma basin is designed to suit the Fiora bathroom furniture collection. Basin dimensions Widths: 62.5 cm Projection"
             title="Fiora Sigma Silexpol Oval Countertop Washbasin - Blanco Total"
             image="https://i.pinimg.com/564x/f0/be/9f/f0be9fae86d61b8a475e41d1bb7002a3.jpg"
           />
-          {/* <HomeProductWithDetail
+          <HomeProductWithDetail
             linkID="/"
             title="Parse"
             image="https://i.pinimg.com/564x/59/12/54/591254355764352c04f0196560bbc2f5.jpg"
-          /> */}
+          />
           {/* <HomeProductWithDetail
             linkID="/"
             title="cera"
@@ -155,12 +162,15 @@ export default function Home() {
           </div>
           <div className="ptn-logo">
             <img
-              src="https://www.jaquar.com/Themes/Jaquar2022/Content/images/logo.svg"
+              src="https://assets.franke.com/is/content/frankemanagement/logo-text-1"
               alt="jaquar"
             />
           </div>
           <div className="ptn-logo">
-            <img src="https://www.hindwarehomes.com/images/hhil-logo.png" alt="" />
+            <img
+              src="https://www.simpolo.net/images/simpolo-logo-2.png"
+              alt=""
+            />
           </div>
         </div>
       </section>

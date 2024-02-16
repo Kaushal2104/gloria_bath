@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaTwitter, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 export default function OverSocial() {
   return (
     <>
@@ -16,33 +17,25 @@ export default function OverSocial() {
           <ul>
             <li>
               <Link className="social instagram" to="/">
-                {/* <span className="icon"> */}
-                  <FaInstagram className="icon" />
-                {/* </span> */}
+                <FaInstagram className="icon" />
                 Instagram
               </Link>
             </li>
             <li>
               <Link className="social twitter" to="/">
-                {/* <span className="icon"> */}
-                  <FaTwitter className="icon" />
-                {/* </span> */}
+                <FaXTwitter className="icon" />
                 Twitter
               </Link>
             </li>
             <li>
               <Link className="social facebook" to="/">
-                {/* <span className="icon"> */}
-                  <FaFacebook className="icon"/>
-                {/* </span> */}
+                <FaFacebook className="icon" />
                 Facebook
               </Link>
             </li>
             <li>
               <Link className="social youtube" to="/">
-                {/* <span className="icon"> */}
-                  <FaYoutube className="icon" />
-                {/* </span> */}
+                <FaYoutube className="icon" />
                 Youtube
               </Link>
             </li>

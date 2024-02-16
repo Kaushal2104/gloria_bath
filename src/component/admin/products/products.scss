@@ -1,0 +1,33 @@
+.table {
+  width: 100%;
+  thead {
+    font-size: 1.6rem;
+    th {
+      border: 1px solid #ccc;
+    }
+  }
+  tbody {
+    font-size: 1.4rem;
+    tr {
+      td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+.form-addProduct {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  > div {
+    > input {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 0.5rem;
+    }
+  }
+}

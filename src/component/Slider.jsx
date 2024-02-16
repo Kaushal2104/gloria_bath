@@ -1,9 +1,6 @@
-
 import { Link } from "react-router-dom";
 
-
 function CarouselFadeExample() {
-
   return (
     <div
       id="carouselExampleCaptions"
@@ -39,6 +36,7 @@ function CarouselFadeExample() {
             className="d-block w-100"
             alt="..."
           />
+          {/* <video muted autoPlay width={'100%'} height={'100%'} src="https://youtu.be/GHD0w3M3zAU"></video> */}
           <div className="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>

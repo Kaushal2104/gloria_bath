@@ -1,25 +1,8 @@
+@import "asset/css/scss_module/variable";
 html {
   font-size: 63.5%;
 }
 // variabal
-
-//
-// @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,500&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap");
-
-@import "asset/css/scss_module/breakpoint";
-@import "asset/css/scss_module/variable";
-@import "asset/css/scss_module/header";
-@import "asset/css/scss_module/breadcum";
-@import "asset/css/scss_module/home";
-@import "asset/css/scss_module/slider";
-@import "asset/css/scss_module/review";
-@import "asset/css/scss_module/trendingProduct";
-@import "asset/css/scss_module/catagorySlider";
-@import "asset/css/scss_module/overSocial";
-@import "asset/css/scss_module/productPage";
-@import "asset/css/scss_module/singleProduct";
-//
-@import "asset/css/scss_module/footer";
 
 .social.facebook {
   &:hover {
@@ -71,6 +54,27 @@ html {
     left: 0;
   }
 }
+
+//
+@import "asset/css/scss_module/breakpoint";
+@import "asset/css/scss_module/header";
+@import "asset/css/scss_module/mobileHeader";
+@import "asset/css/scss_module/breadcum";
+@import "asset/css/scss_module/home";
+@import "asset/css/scss_module/slider";
+@import "asset/css/scss_module/review";
+@import "asset/css/scss_module/trendingProduct";
+@import "asset/css/scss_module/catagorySlider";
+@import "asset/css/scss_module/overSocial";
+@import "asset/css/scss_module/productPage";
+@import "asset/css/scss_module/singleProduct";
+@import "asset/css/scss_module/form";
+@import "asset/css/scss_module/catagoryPage";
+@import "asset/css/scss_module/blogpage";
+@import "asset/css/scss_module/aboutpage";
+@import "asset/css/scss_module/singleBlog";
+//
+@import "asset/css/scss_module/footer";
 
 @include media("<=md") {
   html {

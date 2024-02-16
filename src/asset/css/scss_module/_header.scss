@@ -1,11 +1,24 @@
-header {
+header.active {
+  backdrop-filter: blur(3px);
+  padding: 0 1rem;
+  background-color: #ffffff8c;
+  position: fixed;
+  box-shadow: 0 0 2rem #000;
   z-index: 9999;
   width: 100%;
-  // padding: 1rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+header {
+  z-index: 9999;
+  padding: 0 1rem;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
   .header-container {
     width: 100%;
     display: grid;
+    align-items: center;
     .logo {
+      align-items: center;
       img {
         width: 115px;
       }
@@ -19,6 +32,11 @@ header {
     @include media("<=md") {
       grid-template-columns: unset;
       grid-template-rows: auto 1fr auto;
+      row-gap: 3rem;
+      display: none;
+      > div {
+        padding: 1rem;
+      }
       .logo-container {
         display: flex;
         justify-content: space-between;
@@ -56,6 +74,7 @@ header {
         list-style: none;
         margin: 0;
         padding: 0;
+        gap: 1vw;
         align-items: center;
         @include media("<=md") {
           flex-direction: column;
@@ -70,9 +89,9 @@ header {
           @include media("<=md") {
             width: 100%;
           }
-          &:has(.mega-menu){
-            &::after{
-              content: '';
+          &:has(.mega-menu) {
+            &::after {
+              content: "";
               position: absolute;
               z-index: 999;
               width: 0;
@@ -86,7 +105,7 @@ header {
             }
           }
           &:hover {
-            &::after{
+            &::after {
               visibility: visible;
             }
             .mega-menu {
@@ -97,7 +116,10 @@ header {
           }
           .mega-menu {
             display: none;
+            // overflow: hidden;
+
             visibility: hidden;
+            border-radius: 0 0 0.5rem 0.5rem;
             opacity: 0;
             z-index: 999;
             background-color: white;
@@ -106,7 +128,13 @@ header {
             width: max-content;
             padding: 1rem 3rem;
             transition: all 0.3s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.542);
+            backdrop-filter: blur(0.8rem);
             transform: translateX(-50%);
+            @include media(">md") {
+              border: 1px solid gray;
+              border-top-color: transparent;
+            }
             .link_title {
               font-size: 1.8rem;
               font-weight: 400;
@@ -121,9 +149,12 @@ header {
               li {
                 width: max-content;
                 padding: 1rem 0;
+              
                 &:hover {
+                  // background-color: #000000af;
                   a {
-                    color: $themeColor;
+                    // color: $themeColor;
+                    color: white;
                     text-decoration: underline;
                     text-underline-offset: 3px;
                   }
@@ -133,18 +164,22 @@ header {
                   line-height: 2rem;
                   font-weight: 200;
                   font-size: 1.4rem;
+                  transition: all 0.3s ease-in-out;
                 }
               }
             }
           }
           a {
-            font-size: 1.7rem;
+            font-size: 1.3rem;
             text-decoration: none;
             color: $themeColor;
             text-transform: uppercase;
             position: relative;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 6rem;
+            @include media("<=md") {
+              line-height: 2rem;
+            }
             &::before {
               content: "";
               position: absolute;
@@ -159,9 +194,11 @@ header {
               }
             }
             &.active {
-              color: darken($color: $themeColor, $amount: 10);
+              // color: darken($color: $themeColor, $amount: 10);
+
               &::before {
-                background-color: darken($color: $themeColor, $amount: 10);
+                // background-color: darken($color: $themeColor, $amount: 10);
+                background-color: $themeColor;
                 bottom: -0.7rem;
                 @include media("<=md") {
                   bottom: 50%;

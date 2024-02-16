@@ -25,11 +25,11 @@ export default function ReviewHome() {
           voluptatibus repellendus!
         </p>
       </div>
-      <div style={{textAlign:"center"}}>
+      {/* <div style={{textAlign:"center"}}>
       <Link to="/singleProduct">
          <button>Read more</button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
